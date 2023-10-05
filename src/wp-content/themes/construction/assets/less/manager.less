@@ -1,0 +1,131 @@
+.manager {
+    .manager-grid {
+        margin: 0px;
+        justify-content: center;
+    }
+    .manager-item {
+        width: 20%;
+        padding: 0px;
+        position: relative;
+        transition: all linear .4s;
+        &:hover {
+            .background {
+                opacity: 0.5;
+            }
+            .manager-info {
+                opacity: 1;
+            }
+        }
+    }
+    .manager-image {
+        position: relative;
+        padding-top: 100%;
+    }
+    .background {
+        background: #000;
+        opacity: 0;
+        transition: opacity linear .4s;
+    }
+    .manager-info {
+        position: absolute;
+        left: 20px;
+        bottom: 10px;
+        color: @color-white;
+        opacity: 0;
+        transition: all linear .4s;
+        a {
+            color: @color-white;
+            text-decoration: none;
+        }
+    }
+    .name {
+        margin-bottom: 20px;
+    }   
+    .manager-social {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .social-item {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: @color-white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: all linear .2s;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        &:hover {
+            background: @color-red;
+            span {
+                color: @color-white;
+            }
+        }
+        img {
+            width: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: @pc-view-2) {
+    .manager {
+        .manager-info {
+            left: 10px;
+            bottom: 0px;
+        }
+        .name {
+            margin-bottom: 10px;
+        }
+        .social-item {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: @tablet-view) {
+    .manager {
+        .manager-wrap {
+            padding-bottom: 30px;
+        }
+        .manager-item {
+            width: 25%;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: @mobile-view) {
+    .manager {
+        .manager-wrap {
+            padding-bottom: 20px;
+        }
+        .manager-grid {
+            margin: 0px -5px;
+        }
+        .manager-item {
+            width: 33.333%;
+            margin-bottom: 10px;
+            padding: 0px 5px;
+        }
+        .manager-info {
+            bottom: 10px;
+            left: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: @mobile-small) {
+    .manager {
+        .manager-item {
+            width: 50%;
+        }
+        .manager-info {
+            left: 10px;
+            bottom: 0px;
+        }
+    }
+}

@@ -1,0 +1,247 @@
+footer {
+    .row-footer {
+        margin: 0px -20px;
+        padding: 100px 0px;
+    }
+    .footer-heading {
+        color: @color-white;
+        font-family: 'Poppins-Medium';
+    }
+    .footer-des {
+        color: @color-text;
+        font-family: 'Poppins-Regular';
+        text-decoration: none;
+    }
+    .col-2, .col-5 {
+        padding: 0px 20px;
+    }
+    .col-logo {
+        .logo {
+            width: 100px;
+            flex-shrink: 0;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .col-menu {
+        .row-menu {
+            margin: 0px -15px;
+        }
+        .col-link {
+            padding: 0px 15px;
+        }
+        .footer-heading {
+            padding-bottom: 20px;
+        }
+        .menu-footer {
+            padding-left:  0px;
+            list-style-type: none;
+            margin-bottom: 0px;
+            & .menu-item:not(:last-child) {
+                padding-bottom: 10px;
+            }
+        }
+        .menu-link {
+            transition: all linear .2s;
+            font-family: 'Poppins-Medium';
+            display: inline-block;
+            &:hover {
+                color: @color-white;
+                padding-left: 3px;
+            }
+        }
+    }
+    .col-connect {
+        .connect-des {
+            padding-bottom: 20px;
+            padding-top: 10px;
+        }
+        .form-item {
+            // display: flex;
+            margin-bottom: 20px;
+        }
+        #gform_1 {
+            display: flex;
+        }
+        .gform_wrapper.gravity-theme .gform_fields {
+            display: inline;
+        }
+        .gform_body {
+            flex: 1;
+        }
+        .gform_wrapper.gravity-theme .gfield input.large {
+            border: 0px;
+            outline: none;
+            font-size: 14px;
+            color: @color-text;
+            border: 0px;
+            outline: none;
+            padding: 0px 10px;
+            height: 100%;
+            width: 100%;
+            margin: 0px;
+            height: 41px;
+            &::placeholder {
+                font-size: 14px;
+                color: @color-text;
+            }
+        }
+        .gform_wrapper.gravity-theme .gform_footer {
+            padding: 0px;
+            margin: 0px;
+            input {
+                border: 0px;
+                background: @color-red;
+                color: @color-white;
+                font-size: 14px;
+                font-family: 'Poppins-Medium';
+                padding: 10px 20px;
+                margin-bottom: 0px;
+            }
+        }
+        .social {
+            display: flex;
+            align-items: flex-end;
+        }
+        .footer-heading {
+            padding-bottom: 0px;
+            line-height: 16px;
+            padding-right: 15px;
+        }
+        .list-social {
+            display: flex;
+            list-style-type: none;
+            padding-left: 0px;
+            margin-bottom: 0px;
+            & .social-item:not(:last-child) {
+                margin-right: 15px;
+            }
+        }
+        .social-item {
+            width: 25px;
+        }
+    }
+}
+
+@media screen and (max-width: @pc-view-2) {
+    footer {
+        .row-footer {
+            margin: 0px -10px;
+        }
+        .footer-heading, .footer-des {
+            font-size: 14px;
+        }
+        .col-2, .col-5 {
+            padding: 0px 10px;
+        }
+        .col-logo {
+            width: 12%;
+            .logo {
+                width: 70px;
+            }
+        }
+        .col-menu {
+            width: 55%;
+        }
+        .col-connect {
+            width: 33%;
+        }
+    }
+}
+
+@media screen and (max-width: @tablet-view) {
+    footer {
+        .row-footer {
+            padding: 50px 0px;
+        }
+        .col-logo {
+            width: 20%;
+        }
+        .col-menu {
+            width: 80%;
+        }
+        .col-connect {
+            width: 100%;
+            padding-top: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: @mobile-view) {
+    footer {
+        .row-footer {
+            margin: 0px;
+            padding: 30px 0px;
+        }
+        .col-logo {
+            width: 100%;
+            padding-bottom: 30px;
+            .logo {
+                margin: 0px auto;
+            }
+        }
+        .col-menu {
+            width: 100%;
+            padding: 0px;
+            .row-menu {
+                .col-link {
+                    text-align: center;
+                }
+            }
+        }
+        .col-connect {
+            width: 100%;
+            padding: 0px;
+            padding-top: 30px;
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width: @mobile-small) {
+    footer {
+        .col-menu {
+            width: 100%;
+            padding: 0px;
+            .row-menu {
+                margin: 0px;
+            }
+            .col-link {
+                // padding: 0px;
+                // width: 100%;
+                padding-bottom: 30px;
+            }
+        }
+        .col-connect {
+            padding: 0px;
+            .gform_wrapper.gravity-theme .gfield input.large {
+                font-size: 12px;
+                height: 38px;
+                    &::placeholder {
+                        font-size: 12px;
+                    }
+            }
+            .gform_wrapper.gravity-theme .gform_footer {
+                input {
+                    line-height: initial !important;
+                    padding: 10px;
+                    font-size: 12px;
+                }
+            }
+            .social {
+                display: block;
+            }
+            .footer-heading {
+                padding-right: 0;
+                padding-bottom: 20px;
+            }
+            .list-social {
+                justify-content: center;
+            }
+            .connect-des {
+                padding-top: 0px;
+            }
+        }
+    }
+}

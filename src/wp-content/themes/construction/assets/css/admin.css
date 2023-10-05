@@ -1,0 +1,37 @@
+.image-absolute{
+    bottom: 0px;
+}
+.block-editor__container img{
+    height: -webkit-fill-available;
+}
+.row-image .col-4 .image .image-absolute{
+    position: relative;
+}
+.tab .tab-content .item-image img, .member .col-content .info-icon img, .image-single img{
+    height: auto;
+}
+.image-single{
+    height: 600px;
+}
+.manager .social-item{
+    height: 15px;
+    width: 15px;
+}
+
+.connect .social-item{
+    width: 15px;
+}
+.study .btn-readmore{
+    height: 20px;
+    width: 20px;
+}
+.funfact .col-content .content-text .description{
+    color: white;
+}
+.hidden-admin{
+    display: none;
+}
+
+.show-admin{
+    display: block;
+}

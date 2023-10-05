@@ -1,0 +1,60 @@
+.error-404 {
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    .container-fluid {
+        position: relative;
+        z-index: 2;
+    }
+    .container-inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+    .background {
+        background: #000;
+        opacity: 0.5;
+        z-index: 1;
+    }
+    .content-error {
+        text-align: center;
+        color: @color-white;
+    }
+    .title-error {
+        padding-bottom: 30px;
+    }
+    h1 {
+        font-size: 120px;
+        font-family: 'Poppins-SemiBold';
+    }
+    h2 {
+        font-size: 44px;
+        font-family: 'Poppins-Medium';
+    }
+    .btn-submit {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: @tablet-view) {
+    .error-404 {
+        h1 {
+            font-size: 84px;
+        }
+        h2 {
+            font-size: 36px;
+        }
+    }
+}
+
+@media screen and (max-width: @tablet-view) {
+    .error-404 {
+        h1 {
+            font-size: 68px;
+        }
+        h2 {
+            font-size: 28px;
+        }
+    }
+}

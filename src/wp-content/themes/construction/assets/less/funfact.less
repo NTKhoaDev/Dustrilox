@@ -1,0 +1,151 @@
+.funfact {
+    .col-image {
+        .image {
+            padding-top: 70%;
+            position: relative;
+        }
+    }
+    .col-content {
+        .content {
+            border-bottom: 1px solid @color-border;
+        }
+        .title-wrap {
+            margin-bottom: 50px;
+        }
+        .title {
+            color: @color-white;
+        }
+        .content-item {
+            display: flex;
+            align-items: center;
+            padding-bottom: 30px;
+        }
+        .circle {
+            position: relative;
+            span {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 20px;
+                font-family: 'Poppins-SemiBold';
+                color: @color-white;
+            }
+            canvas {
+                height: 90px !important;
+                width: 90px !important;
+            }
+        }
+        .content-text {
+            padding-left: 20px;
+            .heading {
+                color: @color-white;
+                font-size: 18px;
+                font-family: 'Poppins-SemiBold';
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+            }
+            .description {
+                font-size: 14px;
+                margin-top: 10px;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+            }
+        }
+        .content-note {
+            color: @color-white;
+            text-align: center;
+            padding-top: 10px;
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (max-width: @pc-view-2) {
+    .funfact {
+        .col-content {
+            .circle {
+                span {
+                    font-size: 18px;
+                }
+                canvas {
+                    height: 80px !important;
+                    width: 80px !important;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: @tablet-view) {
+    .funfact {
+        .col-content {
+            .title-wrap {
+                margin-bottom: 30px;
+            }
+            .circle {
+                span {
+                    font-size: 16px;
+                }
+                canvas {
+                    height: 70px !important;
+                    width: 70px !important;
+                }
+            }
+            .content-text {
+                padding-left: 10px;
+                .heading {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: @mobile-view) {
+    .funfact {
+        .funfact-wrap {
+            background-size: 0px;
+            background-color: @color-title;
+        }
+        .col-content {
+            .content {
+                padding-top: 30px;
+                .title-wrap {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: @mobile-small) {
+    .funfact {
+        .col-content {
+            .circle {
+                span {
+                    font-size: 14px;
+                }
+                canvas {
+                    width: 55px !important;
+                    height: 55px !important;
+                }
+            }
+            .content-text {
+                .description {
+                    font-size: 12px;
+                    margin-top: 5px;
+                }
+            }
+            .content-note {
+                font-size: 12px;
+            }
+        }
+    }
+}

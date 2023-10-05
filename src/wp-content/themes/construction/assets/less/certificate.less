@@ -1,0 +1,49 @@
+.certificate {
+    .col-image {
+        .image {
+            position: relative;
+            padding-top: 65%;
+        }
+    }
+    .col-content {
+        .description {
+            margin-top: 10px;
+        }
+        .certificate-image {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding-top: 30px;
+            .image-item:not(:last-child) {
+                margin-right: 20px;
+            }
+        }
+        .image-item {
+            width: 150px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: @pc-view-2) {
+    .certificate {
+        .col-content {
+            .certificate-image {
+                .image-item:not(:last-child) {
+                    margin-right: 10px;
+                }
+            }
+            .image-item {
+                width: 100px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: @tablet-view) {
+    .certificate {
+        .col-content {
+            padding-top: 30px;
+        }
+    }
+}

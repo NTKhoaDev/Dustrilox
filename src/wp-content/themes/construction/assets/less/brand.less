@@ -1,0 +1,92 @@
+.brand {
+    .brand-grid {
+        padding-top: 40px;
+        position: relative;
+        border-top: 1px solid @color-border;
+        border-bottom: 1px solid @color-border;
+        span {
+            font-family: 'Poppins-Medium';
+            color: @color-red;
+            position: absolute;
+            line-height: 16px;
+            top: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: inline-block;
+            background: @color-white;
+            padding: 0px 10px;
+        }
+        .image {
+            margin-bottom: 40px;
+            text-align: center;
+            // width: 20%;
+            text-align: center;
+            img {
+                max-width: 150px;
+                width: 100%;
+                margin: 0px auto;
+            }
+        }
+    }
+}
+.brand {
+    .show-inadmin {
+        .brand-grid {
+            .brands-slide {
+                display: flex;
+                align-items: center;
+            }
+            .image {
+                width: 20%;
+                text-align: center;
+                img {
+                    max-width: 100px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: @pc-view-2) {
+    .brand {
+        .brand-grid {
+            padding-top: 30px;
+            span {
+                font-size: 14px;
+            }
+            .image {
+                margin-bottom: 30px;
+                img {
+                    max-width: 100px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: @mobile-view) {
+    .brand {
+        .brand-grid {
+            span {
+                font-size: 12px;
+            }
+            .image {
+                width: 25%;
+                img {
+                    max-width: 70px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: @mobile-small) {
+    .brand {
+        .brand-grid {
+            .image {
+                width: 33.333%;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

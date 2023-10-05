@@ -1,0 +1,37 @@
+.pagination-wrap {
+    padding-top: 20px;
+    .page-numbers {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: @color-text;
+        font-family: 'Poppins-SemiBold';
+        text-decoration: none;
+    }
+    .current {
+        color: @color-red;
+    }
+    ul {
+        width: fit-content;
+        border: 1px solid @color-red;
+        border-radius: 20px;
+        margin: 0px auto;
+        padding: 5px 15px;
+    }
+    li {
+        padding: 0px 10px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .pagination-wrap {
+        padding-top: 10px;
+        .page-numbers {
+            font-size: 12px;
+        }
+        li {
+            padding: 0px 7px;
+        }
+    }
+}

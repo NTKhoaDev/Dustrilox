@@ -1,0 +1,174 @@
+.process {
+    .row-process {
+        align-items: flex-start;
+    }
+    .col-image {
+        .image-1 {
+            padding-top: 70%;
+            position: relative;
+        }
+        .row {
+            padding-bottom: 100px;
+        }
+        .image {
+            position: relative;
+            padding-top: 140%;
+        }
+        .col-image-right {
+            transform: translateY(100px);
+        }
+    }
+    .col-content {
+        .list-process {
+            list-style-type: none;
+            padding-left: 0px;
+            margin-bottom: 0px;
+            & .process-item:not(:last-child) {
+                border-bottom: 1px solid @color-border;
+            }
+        }
+        .process-item {
+            cursor: pointer;
+        }
+        .process-inner {
+            padding: 20px 0px;
+            padding-right: 50px;
+            position: relative;
+        }
+        .item-wrap {
+            display: flex;
+            align-items: center;
+        }
+        .item-image {
+            width: 55px;
+            flex-shrink: 0;
+        }
+        .item-detail {
+            padding-left: 20px;
+        }
+        .sub-detail {
+            color: @color-text;
+            font-size: 14px;
+        }
+        .detail {
+            color: @color-title;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+        }
+        .image-read {
+            width: 20px;
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            transition: all linear .2s;
+        }
+        .image-rotate {
+            transform: translateY(-50%) rotate(90deg);
+        }
+        .des-accordion {
+            padding: 20px;
+            display: none;
+            background: @color-red;
+            a {
+                text-decoration: none;
+            }
+            .description {
+                font-size: 14px;
+                padding-bottom: 10px;
+                color: @color-white;
+            }
+            span {
+                color: @color-white;
+                font-size: 14px;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: @pc-view-2) {
+    .process {
+        .col-image {
+            .col-image-right {
+                transform: translateY(50px);
+            }
+        }
+        .col-content {
+            .title-wrap {
+                margin-bottom: 20px;
+            }
+            .process-inner {
+                padding: 20px 0px;
+                padding-right: 50px;
+            }
+            .item-image {
+                width: 35px;
+            }
+            .image-read {
+                width: 15px;
+            }
+            .des-accordion {
+                padding: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: @tablet-view) {
+    .process {
+        .col-content {
+            .process-inner {
+                padding: 10px 50px 10px 0px;
+            }
+            .item-detail {
+                padding-left: 10px;
+            }
+            .des-accordion {
+                .description {
+                    font-size: 12px;
+                }
+                span {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: @mobile-view) {
+    .process {
+        .col-image {
+            order: 2;
+            .row {
+                padding-bottom: 50px;
+            }
+        }
+        .col-content {
+            padding-bottom: 30px;
+            order: 1;
+            .sub-detail {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: @mobile-small) {
+    .process {
+        .process-wrap {
+            padding: 30px 0px;
+        }
+        .col-image {
+            .row {
+                padding-bottom: 30px;
+            }
+            .col-image-right {
+                transform: translateY(20px);
+            }
+        }
+    }
+}

@@ -1,0 +1,221 @@
+.accordion {
+    .acc-wrap {
+        padding: 0px;
+    }
+    .arrows-wrap {
+        display: none;
+        img {
+            width: 20px;
+        }
+    }
+    .acc-row {
+        height: 800px;
+        position: relative;
+    }
+    .list-image {
+        img {
+            opacity: 0;
+            transition: opacity linear .5s;
+        }
+        .show {
+            opacity: 1;
+        }
+    }
+    .list-card {
+        display: flex;
+        justify-content: space-between;
+        & .acc-card:not(:last-child) {
+            border-right: 1px solid rgba(255, 255, 255, 0.25)
+        }
+    }
+    .acc-card {
+        width: 100%;
+        position: relative;
+        cursor: pointer;
+        // &:hover {
+        //     .card-content {
+        //         opacity: 1;
+        //         visibility: visible;
+        //     }
+        // }
+    }
+    .card-image {
+        display: none;
+    }
+    .card-content {
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        width: 100%;
+        color: @color-white;
+        background: @color-red;
+        padding: 30px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all linear .2s;
+    }
+    .sub-card {
+        font-size: 14px;
+        font-family: 'Poppins-Medium';
+    }
+    .title-card {
+        font-size: 26px;
+        line-height: 30px;
+        font-family: 'Poppins-SemiBold';
+        margin-bottom: 30px;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        height: 60px;
+    }
+    .link-card {
+        a {
+            display: flex;
+            align-items: center;
+            color: @color-white;
+            text-decoration: none;
+            font-family: 'Poppins-Medium';
+        }
+        .link-plus {
+            width: 40px;
+            height: 40px;
+            background: @color-white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            span {
+                font-size: 20px;
+                color: @color-title;
+            }
+        }
+    }
+    .active {
+        .card-content {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+@media screen and (max-width: @pc-view-1) {
+    .accordion {
+        .acc-row {
+            height: 700px;
+        }
+        .card-content {
+            padding: 20px;
+        }
+        .title-card {
+            font-size: 20px;
+            height: 52px;
+            line-height: 26px;
+        }
+    }
+}
+
+@media screen and (max-width: @pc-view-2) {
+    .accordion {
+        .acc-row {
+            height: 550px;
+        }
+        .card-content {
+            padding: 20px 10px;
+        }
+        .sub-card {
+            padding-bottom: 5px;
+        }
+        .title-card {
+            height: 48px;
+            font-size: 18px;
+            line-height: 24px;
+        }
+        .link-card {
+            .link-plus {
+                width: 35px;
+                height: 35px;
+            }
+            a {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: @tablet-view) {
+    .accordion {
+        .acc-wrap {
+            padding: 50px 0px;
+            background: @color-background;
+        }
+        .arrows-wrap {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 10px;
+            .btn-arrow {
+                margin: 0px 15px;
+                cursor: pointer;
+            }
+        }
+        .acc-row {
+            height: auto;
+        }
+        .list-image {
+            display: none;
+        }
+        .list-card {
+            position: static;
+        }
+        .acc-card {
+            border-radius: 5px;
+            overflow: hidden;
+            height: 450px;
+            width: 300px;
+            margin: 0px 15px;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+        }
+        .card-image {
+            display: block;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .card-content {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: visible;
+        }
+    }
+}
+
+@media screen and (max-width: @mobile-view) {
+    .accordion {
+        .acc-wrap {
+            padding: 30px 0px;
+        }
+        .acc-card {
+            height: 420px;
+            width: 280px;
+            margin: 0px 10px;
+        }
+    }
+}
+
+@media screen and (max-width: @mobile-small) {
+    .accordion {
+        .acc-card {
+            height: 450px;
+            width: 320px;
+        }
+    }
+}

@@ -1,0 +1,214 @@
+.study {
+    .nav-tabs {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+        border: 0px;
+        list-style-type: none;
+        padding-inline-start: 0px;
+        .active {
+            color: @color-red;
+            background-color: transparent;
+            border: transparent;
+        }
+    }
+    .nav-item {
+        border-bottom: 1px solid @color-border;
+        padding-bottom: 10px;
+    }
+    .nav-link {
+        font-size: 16px;
+        font-family: 'Poppins-Semibold';
+        color: @color-text;
+        border: 0px;
+        outline: none;
+        display: inline-block;
+        padding: 0px 15px;
+        transition: all linear .1s;
+        &:hover {
+            border: 0px;
+            isolation: unset;
+            color: @color-red;
+        }
+    }
+    .col-3 {
+        margin-bottom: 30px;
+    }
+    .col-inner {
+        width: 100%;
+        position: relative;
+        height: 100%;
+        &:hover {
+            .background {
+                opacity: 0.8;
+            }
+            .btn-readmore {
+                opacity: 1;
+            }
+            .study-detail {
+                top: 20px;
+            }
+        }
+    }
+    .image {
+        padding-top: 120%;
+        position: relative;
+    }
+    .background {
+        opacity: 0.5;
+        background: #000;
+        transition: opacity linear .2s;
+        border-radius: 10px;
+    }
+    .btn-readmore {
+        width: 50px;
+        height: 50px;
+        background: @color-red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        transition: opacity linear .2s;
+        img {
+            width: 15px;
+        }
+    }
+    .study-detail {
+        position: absolute;
+        left: 20px;
+        top: calc(~'100% - 106px');
+        transition: all linear .5s;
+        padding-right: 20px;
+    }
+    .sub-cate {
+        font-size: 14px;
+        color: @color-white;
+        margin-bottom: 5px;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+    }
+    .study-title {
+        min-height: 60px;
+        color: @color-white;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+    }
+    .btn-submit {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: @pc-view-2) {
+    .study {
+        .row {
+            padding-bottom: 10px;
+        }
+        .col-3 {
+            margin-bottom: 20px;
+        }
+        .cate-item {
+            padding: 0px 15px 10px 15px;
+        }
+        .study-detail {
+            top: calc(~'100% - 100px');
+        }
+        .study-title {
+            min-height: 54px;
+        }
+    }
+}
+
+@media screen and (max-width: @tablet-view) {
+    .study {
+        .cate-item {
+            padding: 0px 10px 10px 10px;
+        }
+        .col-3 {
+            width: calc(~"100%/3");
+        }
+        .col-inner {
+            &:hover {
+                .study-detail {
+                    top: 10px;
+                }
+            }
+        }
+        .image {
+            padding-top: 100%;
+        }
+        .study-detail {
+            top: calc(~'100% - 84px');
+            left: 10px;
+            padding-right: 10px;
+        }
+        .study-title {
+            min-height: 48px;
+        }
+        .sub-cate {
+            font-size: 12px;
+        }
+        .btn-readmore {
+            left: 10px;
+            bottom: 10px;
+            width: 35px;
+            height: 35px;
+            img {
+                width: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: @mobile-view) {
+    .study {
+        .cate-item {
+            margin-bottom: 10px;
+        }
+        .cate-link {
+            font-size: 12px;
+        }
+        .row {
+            padding-bottom: 20px;
+        }
+        .col-3 {
+            margin-bottom: 10px;
+            width: 50%;
+        }
+    }
+}
+
+@media screen and (max-width: @mobile-small) {
+    .study {
+        .row {
+            padding-bottom: 10px;
+        }
+        .col-3 {
+            width: 100%;
+        }
+        .col-inner {
+            &:hover {
+                .study-detail {
+                    left: 20px;
+                    top: 20px;
+                }
+            }
+        }
+        .study-detail {
+            left: 20px;
+            top: calc(~'100% - 91px');
+        }
+        .btn-readmore {
+            left: 20px;
+            bottom: 20px;
+        }
+    }
+}

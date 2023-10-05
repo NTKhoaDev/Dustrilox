@@ -1,0 +1,72 @@
+.skills {
+    .col-image {
+        .image {
+            position: relative;
+            padding-top: 65%;
+        }
+    }
+    .col-range {
+        ul {
+            padding-top: 30px;
+            padding-left: 0px;
+            list-style-type: none;
+            li:not(:last-child) {
+                padding-bottom: 30px;
+            }
+        }
+        li {
+            position: relative;
+        }
+        .description {
+            font-family: 'Poppins-Medium';
+            color: @color-title;
+            padding-right: 100px;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+        }
+        .number-des {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            font-size: 14px;
+            color: @color-red;
+            font-family: 'Poppins-SemiBold';
+        }
+        .slider {
+            width: 100%;
+            height: 5px;
+            pointer-events: none;
+            border-radius: 5px;
+        }
+    }
+}
+
+@media screen and (max-width: @tablet-view) {
+    .skills {
+        .col-range {
+            ul {
+                padding-top: 20px;
+                li:not(:last-child) {
+                    padding-bottom: 25px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: @mobile-view) {
+    .skills {
+        .col-range {
+            padding-bottom: 20px;
+            .description {
+                font-size: 12px;
+            }
+            .number-des {
+                font-size: 12px;
+            }
+        }
+    }
+}

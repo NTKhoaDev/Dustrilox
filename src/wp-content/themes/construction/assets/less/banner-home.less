@@ -1,0 +1,273 @@
+.banner-home {
+    .banner-home-wrap {
+        position: relative;
+    }
+    .slide-wrap {
+        position: relative;
+    }
+    .content-banner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        color: @color-white;
+        text-align: center;
+        width: 100%;
+        max-width: 900px;
+    }
+    .sub-heading {
+        font-size: 42px;
+    }
+    h2 {
+        font-size: 98px;
+        font-family: 'Poppins-Medium';
+        padding-bottom: 20px;
+    }
+    .link {
+        display: flex;
+        justify-content: center;
+        .btn-submit {
+            margin: 0px 15px;
+        }
+    }
+    .slide-banner {
+        position: relative;
+    }
+    .background-default {
+        position: relative;
+        .slide-inner {
+            background: #000;
+        }
+    }
+    .slide-inner {
+        position: relative;
+        padding-top: 51%;
+    }
+    .background {
+        z-index: 5;
+        background: #000;
+        opacity: 0.3;
+    }
+    .dots-slide {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        padding-top: 50px;
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+        .dots-wrap {
+            margin: 0px -15px;
+            justify-content: center;
+        }
+        .dots-item {
+            padding: 0px 15px;
+        }
+        .content-wrap {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding-bottom: 30px;
+            border-bottom: 3px solid transparent;
+            transition: all linear .2s;
+            cursor: pointer;
+            .dots-image {
+                width: 55px;
+                flex-shrink: 0;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        .dots-content {
+            padding-left: 10px;
+            span {
+                font-size: 14px;
+            }
+            .dots-title {
+                transition: color linear .2s;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+            }
+        }
+        .active {
+            .content-wrap {
+                border-color: @color-red;
+                .dots-content {
+                    .dots-title, span {
+                        color: @color-white;
+                    }
+                }
+            }
+        }
+    }
+    .slick-arrow {
+        display: none;
+    }
+    .slick-current {
+        .slide-inner {
+            animation: scale linear 4s forwards;
+        }
+    }
+}
+
+@keyframes scale {
+    to {
+        transform: scale(1.3);
+    }
+}
+
+@media screen and (max-width: @pc-view-1) {
+    .banner-home {
+        .sub-heading {
+            font-size: 36px;
+        }
+        h2 {
+            font-size: 70px;
+        }
+        .dots-slide {
+            .container-inner {
+                padding: 0px;
+            }
+            .content-wrap {
+                padding-bottom: 20px;
+                .dots-image {
+                    width: 45px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1310px) {
+    .banner-home {
+        .dots-slide {
+            .container-inner {
+                overflow: hidden;
+            }
+            .dots-wrap {
+                margin: 0px -10px;
+            }
+            .dots-item {
+                padding: 0px 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: @pc-view-2) {
+    .banner-home {
+        .content-banner {
+            max-width: 750px;
+        }
+        .sub-heading {
+            font-size: 32px;
+        }
+        h2 {
+            font-size: 60px;
+        }
+        .slide-inner {
+            padding-top: 55%;
+        }
+        .dots-slide {
+            .content-wrap {
+                padding-bottom: 10px;
+                .dots-image {
+                    width: 30px;
+                }
+            }
+            .dots-content {
+                span {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: @tablet-view) {
+    .banner-home {
+        .content-banner {
+            max-width: 600px;
+        }
+        .sub-heading {
+            font-size: 28px;
+        }
+        h2 {
+            font-size: 50px;
+        }
+        .slide-inner {
+            padding-top: 60%;
+        }
+        .dots-slide {
+            .dots-wrap {
+                margin: 0px;
+            }
+            .dots-item {
+                width: 50%;
+            }
+            .content-wrap {
+                padding-bottom: 5px;
+                border-width: 2px;
+                .dots-image {
+                    width: 25px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: @mobile-view) {
+    .banner-home {
+        .content-banner {
+            max-width: 400px;
+        }
+        .sub-heading {
+            font-size: 24px;
+        }
+        h2 {
+            font-size: 40px;
+        }
+        .link {
+            .btn-submit {
+                margin: 0px 10px;
+            }
+        }
+        .slide-inner {
+            padding-top: 80%;
+        }
+        .dots-slide {
+            position: static;
+            padding-top: 0px;
+            background: @color-black;
+        }
+    }
+}
+
+@media screen and (max-width: @mobile-small) {
+    .banner-home {
+        .content-banner {
+            max-width: 400px;
+        }
+        .sub-heading {
+            font-size: 20px;
+        }
+        h2 {
+            font-size: 32px;
+        }
+        .slide-inner {
+            padding-top: 100%;
+        }
+        .dots-slide {
+            position: static;
+            padding-top: 0px;
+            background: @color-black;
+            .dots-item {
+                width: 100%;
+            }
+        }
+    }
+}

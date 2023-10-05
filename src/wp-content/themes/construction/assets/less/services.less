@@ -1,0 +1,120 @@
+.services {
+    .container-fuild {
+        overflow: hidden;
+    }
+    .services-wrap {
+        background: @color-background;
+    }
+    .row-services {
+        margin: 0px -25px;
+    }
+    .col-content {
+        padding: 0px 25px;
+        width: 35%;
+        .description {
+            margin-bottom: 30px;
+        }
+    }
+    .col-item {
+        padding: 0px 25px;
+        width: 65%;
+    }
+    .card-link {
+        color: @color-text;
+        text-decoration: none;
+        &:hover {
+            .card-item {
+                .read-more span {
+                    color: @color-red;
+                }
+            }
+        }
+    }
+    .card-item {
+        background: @color-white;
+        padding: 20px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .heading {
+        margin-bottom: 20px;
+        color: @color-title;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+    }
+    .list-des {
+        margin-bottom: 20px;
+        padding-left: 0px;
+        list-style-type: none;
+        border-bottom: 1px solid @color-border;
+        flex: 1;
+    }
+    .des-item {
+        padding-bottom: 10px;
+    }
+    .read-more {
+        color: @color-red;
+    }
+}
+
+@media screen and (max-width: @pc-view-1) {
+    .services {
+        .heading {
+            margin-bottom: 15px;
+        }
+        .des-item {
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (max-width: @pc-view-2) {
+    .services {
+        .row-services {
+            margin: 0px;
+            display: block;
+        }
+        .col-content {
+            width: 100%;
+            max-width: 750px;
+            padding: 0px 0px 30px 0px;
+        }
+        .col-item {
+            width: 100%;
+            padding: 0px;
+        }
+        .des-item {
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (max-width: @tablet-view) {
+    .services {
+        .des-item {
+            font-size: 13px;
+        }
+    }
+}
+
+@media screen and (max-width: @mobile-view) {
+    .services {
+        .row {
+            margin: 0px;
+            & .col-4:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+        .col-4 {
+            padding: 0px;
+            width: 100%;
+        }
+        .list-des {
+            flex: none;
+        }
+    }
+}
